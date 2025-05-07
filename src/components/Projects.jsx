@@ -13,7 +13,7 @@ import Vercel from "../assets/images/stack/Vercel.svg"
 const Projects = () => {
     
   return (
-    <div className="bg-[#e7e7e7] -mt-6">
+    <div className="bg-[#e7e7e7] -mt-6 w-screen">
         <h1 className="text-[var(--bgOrange)] text-center font-bold text-[90px] pt-8">Projects</h1>
         {/* Project Container */}
         <div className="max-w-[1200px] mx-auto py-[3rem] flex flex-col gap-30">
@@ -24,7 +24,7 @@ const Projects = () => {
                 <div className='absolute flex flex-col text-white p-8 bottom-[20%]
                 z-10 gap-[1em] transition-all duration-400 left-[10%] group-hover:scale-[1.08]'>
                     {/* Skills Container */}
-                    <div className='flex w-[60%] gap-2.5 flex-wrap'>
+                    <div className='hidden sm:flex w-[60%] gap-2.5 flex-wrap'>
                         <img src={html} alt="" className='SkillWidth' />
                         <img src={css} alt="" className='SkillWidth'/>
                         <img src={js} alt="" className='SkillWidth'/>
@@ -52,7 +52,7 @@ const Projects = () => {
                 <div className='absolute flex flex-col text-white p-8 bottom-[20%]
                 z-10 gap-[1em] transition-all duration-400 right-[10%] group-hover:scale-[1.08]'>
                     {/* Skills Container */}
-                    <div className='flex w-[60%] gap-2.5 flex-wrap'>
+                    <div className=' hidden sm:flex w-[60%] gap-2.5 flex-wrap'>
                         <img src={html} alt="" className='SkillWidth'/>
                         <img src={css} alt="" className='SkillWidth'/>
                         <img src={js} alt="" className='SkillWidth'/>                     
@@ -97,7 +97,7 @@ const Projects = () => {
                     </div>
                 </div>
             </div>
-            <div className="h-[550px] w-[90%] group project bg-cover bg-no-repeat bg-[url('./Project4.png')] relative ml-30">
+            <div className="hidden sm:flex h-[550px] w-[90%] group project bg-cover bg-no-repeat bg-[url('./Project4.png')] relative ml-30">
                 <div className="font-semibold absolute numberLeft z-10 text-white text-[200px] opacity-0 group-hover:opacity-100">04</div>
                 {/* content(projects) */}
                 <div className='absolute flex flex-col text-white p-8 bottom-[20%]

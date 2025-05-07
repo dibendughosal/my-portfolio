@@ -26,7 +26,7 @@ const TypingEffect = () => {
   }, []);
 
   return (
-    <div className="text-[#343d68] leading-[45px] text-[45px]">
+    <div className="text-[#343d68] leading-[45px] text-3xl sm:text-[45px]">
       I am a{" "}
       <span ref={typedElement} className="text-[#4e45d5] font-[800]"></span>
     </div>

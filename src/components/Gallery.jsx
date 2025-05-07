@@ -22,11 +22,11 @@ function Gallery(){
     return (
         <div className="w-full
        py-20 h-auto">
-            <div className="w-[1200px] mx-auto">
+            <div className="w-full sm:w-[1200px] mx-auto">
                 <hr className="text-gray-400"/>
                 <h2 className="py-5 text-center text-[42px] text-[var(--bgOrange)] font-bold">Gallery</h2>
                 {/* Gallery Images */}
-                <div className="flex flex-wrap gap-4 justify-center cursor-zoom-in">
+                <div className="flex overflow-scroll sm:overflow-hidden sm:flex-wrap gap-4 justify-center cursor-zoom-in">
                    {
                     images.map((img, index) => (
                         <img key={index} src={img} alt="gallery" className="h-[250px] w-[250px] object-cover rounded-xl grayscale hover:grayscale-0 hover:scale-[1.04] transition duration-200 hover:z-10" />

@@ -29,7 +29,7 @@ function Contact() {
           Questions, Thoughts, Or Just Want To Say Hello?
         </h3>
         {/* Contact Form */}
-        <div className="flex items-center justify-center gap-3 py-6">
+        <div className="w-full flex items-center justify-start gap-3 py-6">
           <form
             onSubmit={handleSubmit}
             className="flex flex-col gap-7.5 m-[2rem] w-[70%]"

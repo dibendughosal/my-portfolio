@@ -8,14 +8,14 @@ import TypingEffect from "./typed";
 import "../App.css";
 const HeroSection = () => {
   return (
-    <div className="h-[80%] w-[1200px] mx-auto flex justify-center items-center gap-[80px] my-[79px] pb-[8rem] relative">
+    <div className="h-[80%] w-[1200px] mx-auto flex justify-start items-center gap-[80px] my-[79px] pb-[8rem] px-10 sm:px-0 relative">
       {/* Left Part */}
       <div className="flex flex-col justify-center gap-[2rem]">
         <h1 className="text-[#343d68] font-[500] text-[35px]">
           Hey! Dibendu Ghosal
         </h1>
         <TypingEffect />
-        <div className="w-[70%] mt-4 font-[500]">
+        <div className="hidden sm:block w-[70%] mt-4 font-[500]">
           I&apos;m a <span>Software Engineer</span> and it is my portfolio
           website. Here you&apos;ll know about my journey as a software
           Engineer.
@@ -25,7 +25,7 @@ const HeroSection = () => {
         </div>
       </div>
       {/* Right Part */}
-      <div className="relative">
+      <div className="relative hidden sm:block">
         <img
           src={Dots}
           alt=""

@@ -20,13 +20,13 @@ import GSAP from "../assets/images/stack/GSAP.png";
 
 function Skills() {
   return (
-    <div className='flex p-[5rem] my-[10rem] mx-auto gap-8 relative'>
+    <div className='w-full sm:flex p-[5rem] mb-[8rem] mt-[10rem] mx-auto gap-8 relative'>
         {/* left */}
         <div className='w-[50%] relative flex flex-col gap-10 p-6'>
-            <h2 className='text-[var(--bgOrange)] font-bold leading-[50px] text-[50px]'><span className=' text-[90px]'>M</span>e and <br />
+            <h2 className='w-full text-center text-[var(--bgOrange)] font-bold leading-[50px] text-[50px]'><span className=' text-[90px]'>M</span>e and <br />
             MyTech Stack
             </h2>
-            <div className='text-justify flex flex-col gap-3'>
+            <div className='hidden sm:flex text-justify flex-col gap-3'>
             <p>
             Hey! This Side Dibendu Ghosal, I am a full-stack developer with a strong background in JavaScript and Node.js. I have worked with various frameworks, libraries, and technologies such as React, Next.js, Express, MongoDB, and Redux.
             </p>
@@ -41,7 +41,7 @@ function Skills() {
 
         </div>
         {/* right Container */}
-        <div className='flex justify-center w-[50%] gap-8 flex-wrap relative'>
+        <div className='w-full flex justify-center sm:w-[50%] gap-8 flex-wrap relative'>
           <img src={blobImg} alt="blob" className='BlobImg'/>
           <img src={html} alt="icon1" className='SkillIcon '/>
           <img src={css} alt="icon2" className='SkillIcon'/>
@@ -63,7 +63,7 @@ function Skills() {
 
         </div>
 
-        <div className='absolute select-none text-[7em] text-[rgb(231,231,231)] font-bold -bottom-[34.5%] right-3'>
+        <div className='hidden sm:flex absolute select-none text-[7em] text-[rgb(231,231,231)] font-bold -bottom-[39.5%] right-3'>
             Skills
         </div>
     </div>

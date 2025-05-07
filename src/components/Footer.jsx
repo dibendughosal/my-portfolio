@@ -4,8 +4,8 @@ import { FaGithub, FaLinkedinIn , FaInstagram } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <div className="w-full bg-[#343d68] h-auto">
-      <div className="w-[1200px] mx-auto py-2">
+    <div className="w-full flex justify-center items-center bg-[#343d68] h-auto">
+      <div className="w-[1200px] mx-auto px-10 py-2">
         <div className="flex justify-between w-full items-center py-[30px] text-white">
           <p>&copy; 2025  Dibendu Ghosal. All rights reserved.</p>
           <div className="flex gap-[10px]">
