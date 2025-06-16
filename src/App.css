@@ -210,3 +210,13 @@
 .sdw{
   box-shadow: 2px 2px 10px black;
 }
+.menu-mobile ul{
+  display: flex;
+  flex-direction: column;
+}
+.menu-mobile{
+  position: absolute;
+  top: 20px;
+  /* background-color: aliceblue; */
+  width: 100%;
+}

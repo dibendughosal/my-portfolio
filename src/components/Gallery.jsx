@@ -22,7 +22,7 @@ function Gallery(){
     return (
         <div className="w-full
        py-20 h-auto">
-            <div className="w-full sm:w-[1200px] mx-auto">
+            <div className="w-full md:w-[1200px] mx-auto">
                 <hr className="text-gray-400"/>
                 <h2 className="py-5 text-center text-[42px] text-[var(--bgOrange)] font-bold">Gallery</h2>
                 {/* Gallery Images */}

@@ -10,12 +10,12 @@ const HeroSection = () => {
   return (
     <div className="h-[80%] w-[1200px] mx-auto flex justify-start items-center gap-[80px] my-[79px] pb-[8rem] px-10 sm:px-0 relative">
       {/* Left Part */}
-      <div className="flex flex-col justify-center gap-[2rem]">
-        <h1 className="text-[#343d68] font-[500] text-[35px]">
+      <div className="flex flex-col justify-center gap-[2rem] sm:px-6">
+        <h1 className="text-[#343d68] font-[500] text-[8vw] px-auto sm:text-[35px]">
           Hey! Dibendu Ghosal
         </h1>
         <TypingEffect />
-        <div className="hidden sm:block w-[70%] mt-4 font-[500]">
+        <div className="hidden sm:block w-[70%] mt-4 sm:text-[18px] font-[500]">
           I&apos;m a <span>Software Engineer</span> and it is my portfolio
           website. Here you&apos;ll know about my journey as a software
           Engineer.
@@ -58,7 +58,7 @@ const HeroSection = () => {
         />
       </div>
       {/* Faded Text */}
-      <div className="absolute select-none text-[7em] text-[rgb(231,231,231)] font-bold -bottom-[20%] -left-20">
+      <div className="absolute select-none text-[10vw] sm:text-[7em] text-[rgb(231,231,231)] font-bold -bottom-[20%] sm:-left-20">
         Dibendu Ghosal
       </div>
     </div>

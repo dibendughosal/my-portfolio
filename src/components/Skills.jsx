@@ -63,7 +63,7 @@ function Skills() {
 
         </div>
 
-        <div className='hidden sm:flex absolute select-none text-[7em] text-[rgb(231,231,231)] font-bold -bottom-[39.5%] right-3'>
+        <div className='hidden md:flex absolute select-none text-[7em] text-[rgb(231,231,231)] font-bold -bottom-[39.5%] right-3'>
             Skills
         </div>
     </div>
