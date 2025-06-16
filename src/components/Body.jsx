@@ -6,7 +6,7 @@ import Skills from "./Skills"
 
 const Body = () => {
   return (
-    <div className="max-w-full">
+    <div className="max-w-full z-0">
       <HeroSection/>
       <Projects/>
       <Skills/>

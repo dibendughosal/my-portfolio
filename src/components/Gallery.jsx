@@ -14,28 +14,32 @@ import img13 from "../assets/images/myImg/RCZBE3264.JPG";
 import img14 from "../assets/images/myImg/SWQN6866.JPG";
 import img15 from "../assets/images/myImg/UWFFE7662.JPG";
 
+import CustomCursor from "./../components/CustomCursor";
 
 
 function Gallery(){
 
     const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15];
     return (
-        <div className="w-full
-       py-20 h-auto">
-            <div className="w-full md:w-[1200px] mx-auto">
-                <hr className="text-gray-400"/>
-                <h2 className="py-5 text-center text-[42px] text-[var(--bgOrange)] font-bold">Gallery</h2>
-                {/* Gallery Images */}
-                <div className="flex overflow-scroll sm:overflow-hidden sm:flex-wrap gap-4 justify-center cursor-zoom-in">
-                   {
-                    images.map((img, index) => (
-                        <img key={index} src={img} alt="gallery" className="h-[250px] w-[250px] object-cover rounded-xl grayscale hover:grayscale-0 hover:scale-[1.04] transition duration-200 hover:z-10" />
-                    ))
-                   }
+        <>
+            <CustomCursor/>
+            <div className="w-full
+        py-20 h-auto cursor-none">
+                <div className="w-full md:w-[1200px] mx-auto">
+                    <hr className="text-gray-400"/>
+                    <h2 className="py-5 text-center text-[42px] text-[var(--bgOrange)] font-bold">Gallery</h2>
+                    {/* Gallery Images */}
+                    <div className="flex overflow-scroll sm:overflow-hidden sm:flex-wrap gap-4 justify-center">
+                    {
+                        images.map((img, index) => (
+                            <img key={index} src={img} alt="gallery" className="h-[250px] w-[250px] object-cover rounded-xl grayscale hover:grayscale-0 hover:scale-[1.04] transition duration-200 hover:z-10" />
+                        ))
+                    }
+                    </div>
                 </div>
-            </div>
 
-        </div>
+            </div>
+        </>
     )
 }
 export default Gallery;
