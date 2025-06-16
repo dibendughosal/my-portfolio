@@ -6,6 +6,7 @@ import circleImg from "../assets/images/userAsset/circle.png";
 import cubeImg from "../assets/images/userAsset/cube.png";
 import TypingEffect from "./typed";
 import "../App.css";
+import { Link } from "react-router-dom";
 const HeroSection = () => {
   return (
     <div className="h-[80%] w-[1200px] mx-auto flex justify-start items-center gap-[80px] my-[79px] pb-[8rem] px-10 sm:px-0 relative">
@@ -20,9 +21,9 @@ const HeroSection = () => {
           website. Here you&apos;ll know about my journey as a software
           Engineer.
         </div>
-        <div className="bg-[var(--bgOrange)] w-fit  text-white font-[500] shadowHireBtn relative transition duration-500 border-[3px] border-solid border-transparent py-[0.8rem] px-[2.3rem] btn-pink">
+        <Link to="https://www.linkedin.com/in/dibendughosal/" className="bg-[var(--bgOrange)] w-fit  text-white font-[500] shadowHireBtn relative transition duration-500 border-[3px] border-solid border-transparent py-[0.8rem] px-[2.3rem] btn-pink">
           Hire Me
-        </div>
+        </Link>
       </div>
       {/* Right Part */}
       <div className="relative hidden sm:block">
