@@ -32,7 +32,7 @@ function Gallery(){
                     <div className="flex overflow-scroll sm:overflow-hidden sm:flex-wrap gap-4 justify-center">
                     {
                         images.map((img, index) => (
-                            <img key={index} src={img} alt="gallery" className="h-[250px] w-[250px] object-cover rounded-xl grayscale hover:grayscale-0 hover:scale-[1.04] transition duration-200 hover:z-10" />
+                            <img key={index} src={img} alt="gallery" className="h-[250px] w-[250px] object-cover rounded-xl grayscale hover:grayscale-0 hover:scale-[1.04] transition duration-400 hover:z-10" />
                         ))
                     }
                     </div>
