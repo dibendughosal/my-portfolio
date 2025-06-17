@@ -8,10 +8,12 @@ import Gallery from "./components/Gallery";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Projects from "./components/Projects";
+import CustomCursor from "./components/CustomCursor";
 function App() {
   return (
-    <div className="w-screen h-screen box-border font-serif overflow-x-hidden">
+    <div className="cursor-none w-screen h-screen box-border font-serif overflow-x-hidden">
       <div className="w-full mx-auto">
+        <CustomCursor/>
         <Header />
         <Routes>
           <Route path="/" element={<Body />} />

@@ -1,53 +1,75 @@
-// src/components/CustomCursor.jsx
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 const CustomCursor = () => {
-  const cursorRef = useRef(null);
+  const dotRef = useRef(null);
+  const ringRef = useRef(null);
 
   useEffect(() => {
-    const moveCursor = (e) => {
-      gsap.to(cursorRef.current, {
-        x: e.clientX,
-        y: e.clientY,
-        duration: 0.2,
+    let mouseX = 0;
+    let mouseY = 0;
+
+    const move = (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+
+      // Dot follows instantly
+      gsap.set(dotRef.current, {
+        x: mouseX,
+        y: mouseY,
+      });
+
+      // Ring follows smoothly
+      gsap.to(ringRef.current, {
+        x: mouseX,
+        y: mouseY,
+        duration: 0.3,
         ease: "power2.out",
       });
     };
 
-    // Inside useEffect or additional state
-document.querySelectorAll("a, button").forEach((el) => {
-  el.addEventListener("mouseenter", () => {
-    gsap.to(cursorRef.current, { scale: 2 });
-  });
-  el.addEventListener("mouseleave", () => {
-    gsap.to(cursorRef.current, { scale: 1 });
-  });
-});
-
-
-    window.addEventListener("mousemove", moveCursor);
-    return () => window.removeEventListener("mousemove", moveCursor);
+    window.addEventListener("mousemove", move);
+    return () => window.removeEventListener("mousemove", move);
   }, []);
 
   return (
-    <div
-      ref={cursorRef}
-      style={{
-        position: "absolute",
-        top: 0,
-        left: 0,
-        width: "50px",
-        height: "50px",
-        border: "4px solid #e6e4f3",
-        borderRadius: "50%",
-        transform: "translate(-50%, -50%)",
-        pointerEvents: "none",
-        zIndex: 99999,
-        mixBlendMode: "difference",
-        color: "black"
-      }}
-    />
+    <>
+      {/* Smooth ring */}
+      <div
+        ref={ringRef}
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "60px",
+          height: "60px",
+          border: "2px solid black",
+          borderRadius: "50%",
+          pointerEvents: "none",
+          transform: "translate(-50%, -50%)",
+          zIndex: 99999,
+          mixBlendMode: "difference",
+        }}
+      />
+
+      {/* Fast dot */}
+      <div
+        ref={dotRef}
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "15px",
+          height: "15px",
+          backgroundColor: "deeppink",
+          borderRadius: "50%",
+          pointerEvents: "none",
+          transform: "translate(-50%, -50%)",
+          zIndex: 1000,
+          mixBlendMode: "difference",
+        }}
+      />
+    </>
   );
 };
 

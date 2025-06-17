@@ -9,7 +9,7 @@ import "../App.css";
 import { Link } from "react-router-dom";
 const HeroSection = () => {
   return (
-    <div className="h-[80%] w-[1200px] mx-auto flex justify-start items-center gap-[80px] my-[79px] pb-[8rem] px-10 sm:px-0 relative">
+    <div className="h-[80%] w-[1200px] mx-auto flex justify-start items-center gap-[80px] my-[79px] pb-[8rem] px-10 sm:px-0 relative z-0">
       {/* Left Part */}
       <div className="flex flex-col justify-center gap-[2rem] sm:px-6">
         <h1 className="text-[#343d68] font-[500] text-[8vw] px-auto sm:text-[35px]">
