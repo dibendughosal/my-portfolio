@@ -1,6 +1,6 @@
 import dImg from '../assets/images/userAsset/Letter_D_Cleaned.png';
 import gIMG from '../assets/images/userAsset/G_cleaned.png';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from 'react';
 import { IoMdClose } from "react-icons/io";
@@ -20,11 +20,11 @@ const Header = () => {
             </div>
             <div>
                 <ul className='hidden md:flex justify-between gap-4 text-[20px] font-[500] px-4 '>
-                    <li className='hover:text-[#4e45d5] hover:font-[800] transition duration-[0.5s] hover:scale-[1.02]'><Link to="/about">About</Link></li>
-                    <li className='hover:text-[#4e45d5] hover:font-[800] transition duration-[0.5s] hover:scale-[1.02]'><Link to="/projects">Services</Link></li>
-                    <li className='hover:text-[#4e45d5] hover:font-[800] transition duration-[0.5s] hover:scale-[1.02]'><Link to='/gallery'>Gallery</Link></li>
-                    <li className='hover:text-[#4e45d5] hover:font-[800] transition duration-[0.5s] hover:scale-[1.02]'><Link to='/contact'>Contact</Link></li>
-                    <li className='hover:text-[#4e45d5] hover:font-[800] transition duration-[0.5s] hover:scale-[1.02]' ><Link to='/blog'>Blog</Link></li>
+                    <li className='hover:text-[#4e45d5] hover:font-[800] transition duration-[0.5s] hover:scale-[1.02]'><NavLink to="/about">About</NavLink></li>
+                    <li className='hover:text-[#4e45d5] hover:font-[800] transition duration-[0.5s] hover:scale-[1.02]'><NavLink to="/projects">Services</NavLink></li>
+                    <li className='hover:text-[#4e45d5] hover:font-[800] transition duration-[0.5s] hover:scale-[1.02]'><NavLink to='/gallery'>Gallery</NavLink></li>
+                    <li className='hover:text-[#4e45d5] hover:font-[800] transition duration-[0.5s] hover:scale-[1.02]'><NavLink to='/contact'>Contact</NavLink></li>
+                    <li className='hover:text-[#4e45d5] hover:font-[800] transition duration-[0.5s] hover:scale-[1.02]' ><NavLink to='/blog'>Blog</NavLink></li>
                 </ul>
             </div>
             <div className='text-3xl md:hidden px-10' onClick={hamburgerHandler}>
@@ -36,19 +36,19 @@ const Header = () => {
         <div className="md:hidden bg-white px-9 pb-4">
           <ul className="flex flex-col gap-4 text-[18px] font-medium">
             <li className="hover:text-[#4e45d5] transition duration-300">
-              <Link to="/about" onClick={hamburgerHandler}>About</Link>
+              <NavLink to="/about" onClick={hamburgerHandler}>About</NavLink>
             </li>
             <li className="hover:text-[#4e45d5] transition duration-300">
-              <Link to="/projects" onClick={hamburgerHandler}>Services</Link>
+              <NavLink to="/projects" onClick={hamburgerHandler}>Services</NavLink>
             </li>
             <li className="hover:text-[#4e45d5] transition duration-300">
-              <Link to="/gallery" onClick={hamburgerHandler}>Gallery</Link>
+              <NavLink to="/gallery" onClick={hamburgerHandler}>Gallery</NavLink>
             </li>
             <li className="hover:text-[#4e45d5] transition duration-300">
-              <Link to="/contact" onClick={hamburgerHandler}>Contact</Link>
+              <NavLink to="/contact" onClick={hamburgerHandler}>Contact</NavLink>
             </li>
             <li className="hover:text-[#4e45d5] transition duration-300">
-              <Link to="/blog" onClick={hamburgerHandler}>Blog</Link>
+              <NavLink to="/blog" onClick={hamburgerHandler}>Blog</NavLink>
             </li>
           </ul>
         </div>

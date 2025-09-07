@@ -19,7 +19,7 @@ function Gallery(){
     const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15];
     return (
         <div className="w-full
-        py-20 h-auto cursor-none z-0">
+        pb-20 h-auto cursor-none z-0">
             <div className="w-full md:w-[1200px] mx-auto">
                     <hr className="text-gray-400"/>
                     <h2 className="py-5 text-center text-[42px] text-[var(--bgOrange)] font-bold">Gallery</h2>

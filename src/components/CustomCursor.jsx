@@ -1,11 +1,22 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
 const CustomCursor = () => {
   const dotRef = useRef(null);
   const ringRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return; // disable on mobile
+
     let mouseX = 0;
     let mouseY = 0;
 
@@ -13,13 +24,7 @@ const CustomCursor = () => {
       mouseX = e.clientX;
       mouseY = e.clientY;
 
-      // Dot follows instantly
-      gsap.set(dotRef.current, {
-        x: mouseX,
-        y: mouseY,
-      });
-
-      // Ring follows smoothly
+      gsap.set(dotRef.current, { x: mouseX, y: mouseY });
       gsap.to(ringRef.current, {
         x: mouseX,
         y: mouseY,
@@ -30,11 +35,12 @@ const CustomCursor = () => {
 
     window.addEventListener("mousemove", move);
     return () => window.removeEventListener("mousemove", move);
-  }, []);
+  }, [isMobile]);
+
+  if (isMobile) return null; // Don't render cursor
 
   return (
     <>
-      {/* Smooth ring */}
       <div
         ref={ringRef}
         style={{
@@ -51,8 +57,6 @@ const CustomCursor = () => {
           mixBlendMode: "difference",
         }}
       />
-
-      {/* Fast dot */}
       <div
         ref={dotRef}
         style={{

@@ -20,8 +20,9 @@ function Contact() {
     setFormData({ name: "", email: "", subject: "", message: "" });
   };
   return (
-    <div className="w-full bg-[rgb(231,231,231)]">
+    <div className="w-full ">
       <div className="md:w-[1200px] mx-auto py-2">
+        <hr/>
         <h1 className="text-[5rem] text-[var(--bgOrange)] font-bold pt-[2rem]">
           Contact Me
         </h1>

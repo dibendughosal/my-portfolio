@@ -13,8 +13,8 @@ import Vercel from "../assets/images/stack/Vercel.svg"
 const Projects = () => {
     
   return (
-    <div className="bg-[#e7e7e7] -mt-6 w-screen">
-        <h1 className="text-[var(--bgOrange)] text-center font-bold text-[90px] pt-8">Projects</h1>
+    <div className=" -mt-6 w-screen">
+        <h1 className="text-[var(--bgOrange)] text-center font-bold text-[70px] underline pt-8">Projects</h1>
         {/* Project Container */}
         <div className="max-w-[1200px] mx-auto py-[3rem] flex flex-col gap-30">
             {/* Project Cards */}

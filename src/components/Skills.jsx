@@ -20,7 +20,7 @@ import GSAP from "../assets/images/stack/GSAP.png";
 
 function Skills() {
   return (
-    <div className='w-full sm:flex p-[5rem] mb-[8rem] mt-[5rem] mx-auto gap-8 relative'>
+    <div className='w-full sm:flex p-[5rem] mb-[8rem] mt-[1rem] mx-auto gap-8 relative'>
         {/* left */}
         <div className='w-[50%] relative flex flex-col gap-10 p-6'>
             <h2 className='w-full text-center text-[var(--bgOrange)] font-bold leading-[50px] text-[50px]'><span className=' text-[90px]'>M</span>e and <br />
@@ -63,7 +63,7 @@ function Skills() {
 
         </div>
 
-        <div className='hidden md:flex absolute select-none text-[7em] text-[rgb(231,231,231)] font-bold -bottom-[39.5%] right-3'>
+        <div className='hidden md:flex absolute select-none text-[7em] text-[rgb(231,231,231)] font-bold -bottom-[26.5%] right-3'>
             Skills
         </div>
     </div>
