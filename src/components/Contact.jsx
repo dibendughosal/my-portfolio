@@ -15,7 +15,6 @@ function Contact() {
 
   const handleSubmit = async(e) => {
     e.preventDefault();
-    console.log(formData);
     const url="http://localhost:3000/message/";
     let response = await fetch(url, {
       method: 'Post',
