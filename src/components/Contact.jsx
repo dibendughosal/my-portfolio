@@ -13,10 +13,18 @@ function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     console.log(formData);
-    alert("Message sent ✔");
+    const url="http://localhost:3000/message/";
+    let response = await fetch(url, {
+      method: 'Post',
+      body: JSON.stringify({formData})
+    });
+    response = response.json();
+    if(response){
+      alert("Message sent ✔");
+    }
     setFormData({ name: "", email: "", subject: "", message: "" });
   };
   return (
@@ -72,7 +80,7 @@ function Contact() {
               <button
                 type="submit"
                 className="btn-pink font-bold hover:scale-[0.9] flex items-center gap-2 border-none"
-              >
+              onClick={handleSubmit}>
                 Send Message
                 <FontAwesomeIcon icon={faPaperPlane} />
               </button>
