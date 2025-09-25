@@ -14,9 +14,11 @@ const Header = () => {
     }
     return (
         <div className="flex items-center justify-between pt-4 font-serif md:w-[1200px] mx-auto mb-7">
-            <div className='flex md:w-[200px] items-center relative px-4'>          
+            <div className='flex md:w-[200px] items-center relative px-4 cursor-none'>
+              <NavLink to='/'>
                 <img src={dImg} alt="D Letter" className='w-10 md:w-[80px] absolute'/>
                 <img src={gIMG} alt="G Letter" className='w-10 md:w-20 ml-5 md:ml-10' />             
+              </NavLink>          
             </div>
             <div>
                 <ul className='hidden md:flex justify-between gap-4 text-[20px] font-[500] px-4 '>
